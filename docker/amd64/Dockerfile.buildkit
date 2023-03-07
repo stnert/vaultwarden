@@ -88,7 +88,7 @@ RUN setcap cap_net_bind_service=+ep target/release/vaultwarden
 ######################## RUNTIME IMAGE  ########################
 # Create a new stage with a minimal image
 # because we already have a binary built
-FROM debian:bullseye-slim
+FROM debian:11.6-slim
 
 ENV ROCKET_PROFILE="release" \
     ROCKET_ADDRESS=0.0.0.0 \
