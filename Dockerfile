@@ -83,7 +83,7 @@ RUN cargo build --features ${DB} --release
 ######################## RUNTIME IMAGE  ########################
 # Create a new stage with a minimal image
 # because we already have a binary built
-FROM debian:11.6-slim
+FROM debian:bullseye-20240408-slim
 
 ENV ROCKET_PROFILE="release" \
     ROCKET_ADDRESS=0.0.0.0 \
